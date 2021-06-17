@@ -54,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
                     if(calcularPrimo(Integer.parseInt(txtNumero.getText().toString()))){
                         i.putExtra("Numero" , "El numero: " + txtNumero.getText().toString() + " es primo");
                         startActivityForResult(i, LAUNCH_GETNUMBER_TOP);
+                    }else{
+                        Toast.makeText(getApplicationContext(), "No es un numero primo...", Toast.LENGTH_LONG).show();
                     }
-                }else{
-                    Toast.makeText(getApplicationContext(), "No es un numero primo...", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -128,7 +128,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean calcularPrimo(int numero){
+        int contador = 2;
+        boolean primo=true;
 
-        return true;
+        while ((primo) && (contador!=numero)){
+            if (numero % contador == 0)
+                primo = false;
+            contador++;
+        }
+        return primo;
     }
 }
