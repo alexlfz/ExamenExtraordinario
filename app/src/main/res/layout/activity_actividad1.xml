@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Actividad1">
+
+    <TextView
+        android:id="@+id/txtEsPrimo"
+        android:layout_width="316dp"
+        android:layout_height="226dp"
+        android:layout_marginTop="184dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="206dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="92dp"
+        android:text="volver"
+        app:layout_constraintEnd_toEndOf="@+id/txtEsPrimo"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/txtEsPrimo"
+        app:layout_constraintTop_toBottomOf="@+id/txtEsPrimo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
